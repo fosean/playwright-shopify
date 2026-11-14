@@ -1,0 +1,23 @@
+{
+  "name": "playwright-shopify",
+  "version": "1.0.0",
+  "description": "UI automated testing for websites built with React",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fosean/playwright-shopify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fosean/playwright-shopify/issues"
+  },
+  "homepage": "https://github.com/fosean/playwright-shopify#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6"
+  }
+}
