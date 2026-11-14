@@ -4,7 +4,7 @@ test.describe("HomePage", () => {
     test.beforeEach(async ({page})=> {
         await page.goto("https://www.shopify.com/ca");
     })
-    test("main menu shows on home page", async ({page}) => {
+    test("main menu shown on home page", async ({page}) => {
         await expect(page.getByTestId("desktop-main-navigation")).toBeVisible();
 
         await expect(page.getByTestId("logo-home")).toBeVisible();
@@ -61,10 +61,16 @@ test.describe("HomePage", () => {
             )).toBeVisible();
     })
 
-    // test("body shows on home page", async ({page}) => {
-    //     await
-    // })
-    //
+    test("body shown on home page", async ({page}) => {
+        await expect(page.getByTestId("hero")).toBeVisible();
+        await expect(page.getByTestId("home-ab-section")).toBeVisible();
+        await expect(page.getByTestId("home-agentic-section")).toBeVisible();
+        await expect(page.getByTestId("home-unified-commerce-section")).toBeVisible();
+        await expect(page.getByTestId("local-and-global")).toBeVisible();
+        await expect(page.getByTestId("for-everyone")).toBeVisible();
+        await expect(page.getByTestId("home-sidekick-section")).toBeVisible();
+    })
+
     // test ("footer is shown on home page", async ({page}) => {
     //     await
     // })
