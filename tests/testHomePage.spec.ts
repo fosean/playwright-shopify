@@ -79,9 +79,34 @@ test.describe("HomePage", () => {
 
     })
 
-    // test ("footer is shown on home page", async ({page}) => {
-    //     await
-    // })
+    test ("footer is shown on home page", async ({page}) => {
+        await expect(page.getByRole("link", { name: "Back to the top" })).toBeVisible();
+        await expect(page.getByRole("heading", { name: "Shopify", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "What is Shopify?", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Shopify Editions", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Careers", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Investors", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Newsroom", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Sustainability", exact:true })).toBeVisible();
+        await expect(page.getByRole("heading", { name: "Ecosystem", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Developer Docs", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Theme Store", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "App Store", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Partners", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Affiliates", exact:true })).toBeVisible();
+        await expect(page.getByRole("heading", { name: "Resources", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Blog", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Compare Shopify", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Guides", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Free Tools", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Changelog", exact:true })).toBeVisible();
+
+        await expect(page.getByRole("heading", { name: "Support", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Shopify Help Center", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Community Forum", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Hire a Partner", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Service Status", exact:true })).toBeVisible();
+    })
 
     test("video modal appears", async ({page}) => {
         await expect(page.getByTestId("video-modal-pip-button")).toBeVisible();
