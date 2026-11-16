@@ -106,6 +106,21 @@ test.describe("HomePage", () => {
         await expect(page.getByRole("link", { name: "Community Forum", exact:true })).toBeVisible();
         await expect(page.getByRole("link", { name: "Hire a Partner", exact:true })).toBeVisible();
         await expect(page.getByRole("link", { name: "Service Status", exact:true })).toBeVisible();
+
+        await expect(page.getByTestId("regions")).toBeVisible();
+        await expect(page.getByRole("link", { name: "Terms of Service", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Legal", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Privacy Policy", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Sitemap", exact:true })).toBeVisible();
+        await expect(page.getByRole("link", { name: "Your Privacy Choices" })).toBeVisible();
+
+        await expect(page.getByRole("link", {name: "External source: Facebook ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: Twitter ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: YouTube ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: Instagram ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: TikTok ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: LinkedIn ("})).toBeVisible();
+        await expect(page.getByRole("link", {name: "External source: Pinterest ("})).toBeVisible();
     })
 
     test("video modal appears", async ({page}) => {
