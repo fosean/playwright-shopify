@@ -66,14 +66,23 @@ test.describe("HomePage", () => {
         await expect(page.getByTestId("home-ab-section")).toBeVisible();
         await expect(page.getByTestId("home-agentic-section")).toBeVisible();
         await expect(page.getByTestId("home-unified-commerce-section")).toBeVisible();
-        await expect(page.getByTestId("local-and-global")).toBeVisible();
-        await expect(page.getByTestId("for-everyone")).toBeVisible();
+        await expect(page.getByTestId("data-localglobal-section")).toBeVisible();
+        await expect(page.getByTestId("home-foreveryone-section")).toBeVisible();
         await expect(page.getByTestId("home-sidekick-section")).toBeVisible();
+        await expect(page.getByTestId("home-apps-section")).toBeVisible();
+        await expect(page.getByTestId("home-dev-section")).toBeVisible();
+        await expect(page.getByTestId("home-heading-section")).toBeVisible();
+        await expect(page.getByTestId("home-stats-section")).toBeVisible();
+        await expect(page.getByTestId("home-rocksteady-section")).toBeVisible();
+        await expect(page.getByTestId("home-capital-section")).toBeVisible();
+        await expect(page.getByTestId("home-conversion-section")).toBeVisible();
+
     })
 
     // test ("footer is shown on home page", async ({page}) => {
     //     await
     // })
+
     test("video modal appears", async ({page}) => {
         await expect(page.getByTestId("video-modal-pip-button")).toBeVisible();
     })
