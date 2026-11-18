@@ -126,5 +126,19 @@ test.describe("HomePage", () => {
     test("video modal appears", async ({page}) => {
         await expect(page.getByTestId("video-modal-pip-button")).toBeVisible();
     })
+
+    test("log in redirection", async ({page}) => {
+        await page.getByRole('link', { name: 'Log in' }).click();
+
+        await expect(page).toHaveURL(/^https:\/\/accounts\.shopify\.com\/lookup/);
+        await expect(page.getByRole('heading', { name: 'Log in' })).toBeVisible();
+        await expect(page.getByRole('heading', { name: 'Continue to Shopify' })).toBeVisible();
+        await expect(page.locator("#account_email")).toBeVisible();
+        await expect(page.getByRole("button", { name: "Continue with email", exact:true })).toBeVisible();
+        await expect(page.getByRole('button', { name: 'Sign in with passkey' })).toBeVisible();
+
+        await expect(page.getByText("New to Shopify?")).toBeVisible();
+        await expect(page.getByRole("link", { name: "Get started" })).toBeVisible();
+    })
 })
 
